@@ -1,6 +1,5 @@
 import { google, sheets_v4 } from 'googleapis';
 import { OAuth2Client } from 'google-auth-library';
-import path from 'path';
 
 interface SheetData {
     month: string;
@@ -9,10 +8,9 @@ interface SheetData {
 }
 
 async function fetchDataFromSheet(): Promise<SheetData[]> {
-    const keyFilePath = path.resolve(__dirname, './../../composite-set-387023-860eb506c3cc.json');
 
     const auth = new google.auth.GoogleAuth({
-        keyFile: keyFilePath,
+        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY!),
         scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
     });
 
