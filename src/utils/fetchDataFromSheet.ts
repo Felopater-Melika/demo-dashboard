@@ -9,7 +9,7 @@ interface SheetData {
 }
 
 async function fetchDataFromSheet(): Promise<SheetData[]> {
-    const keyFilePath = path.resolve(__dirname, '../../composite-set-387023-860eb506c3cc.json');
+    const keyFilePath = path.resolve(__dirname, './composite-set-387023-860eb506c3cc.json');
 
     const auth = new google.auth.GoogleAuth({
         keyFile: keyFilePath,
