@@ -26,6 +26,7 @@
     "googleapis": "^118.0.0",
     "lodash": "^4.17.21",
     "next": "latest",
+    "prop-types": "^15.8.1",
     "react": "latest",
     "react-apexcharts": "^1.4.0",
     "react-dom": "latest",
